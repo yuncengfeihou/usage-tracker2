@@ -61,3 +61,13 @@
     margin-left: 10px;
     opacity: 0.7;
 }
+
+.usage-tracker-settings h4 {
+    margin-top: 20px; /* 在子标题上方增加空间 */
+    margin-bottom: 15px;
+    font-weight: bold;
+    /* 其他你想要的样式 */
+}
+.usage-tracker-settings h3 { /* 给总标题也加点样式 */
+     margin-bottom: 15px;
+}
