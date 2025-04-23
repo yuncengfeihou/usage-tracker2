@@ -71,3 +71,37 @@
 .usage-tracker-settings h3 { /* 给总标题也加点样式 */
      margin-bottom: 15px;
 }
+
+/* 目标：直接位于 .flex-container 下的按钮 */
+/* 例如：“请求权限”、“添加阈值”、“添加时间点” 按钮 */
+.usage-tracker-settings .flex-container > .menu_button {
+    flex-shrink: 0;      /* 防止按钮在 flex 容器中被压缩 */
+    width: auto;         /* 强制根据内容计算宽度，覆盖可能错误的计算值 */
+    white-space: nowrap; /* 防止按钮内文本或图标换行 */
+    /* 可以考虑加一个最小宽度，如果 auto 导致在某些极端情况太窄 */
+    /* min-width: fit-content; */ /* 或者 min-width: max-content; 试验哪个效果好 */
+}
+
+/* 目标：阈值/时间点列表中的删除按钮 */
+/* 结构通常是 .threshold-item > div > .menu_button */
+.usage-tracker-settings .threshold-item .menu_button {
+    flex-shrink: 0;      /* 防止删除按钮被压缩 */
+    width: auto;         /* 强制根据内容计算宽度 */
+    white-space: nowrap; /* 防止图标换行（虽然图标一般不会）*/
+    /* 这里通常不需要 min-width，因为图标按钮宽度比较固定 */
+}
+
+/* 确保包含复选框和删除按钮的 div 本身不被过度压缩 */
+/* 结构是 .threshold-item > div */
+.usage-tracker-settings .threshold-item > div {
+    flex-shrink: 0; /* 防止这个小容器被压缩 */
+    /* 可以考虑也给它加 display: flex 来更好地控制内部的 checkbox 和 button */
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* 确保它被推到最右边 */
+}
+
+/* 微调：如果复选框和删除按钮贴太近，可以给删除按钮加点左边距 */
+.usage-tracker-settings .threshold-item > div > .menu_button {
+    margin-left: 5px; /* 在复选框和删除按钮之间添加空隙 */
+}
