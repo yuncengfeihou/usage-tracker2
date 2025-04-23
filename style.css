@@ -1,0 +1,63 @@
+.usage-tracker-settings .usage-tracker_block {
+    margin-bottom: 10px;
+    align-items: center; /* Vertically center items in flex containers */
+}
+
+.usage-tracker-settings label {
+    margin-right: 10px;
+    min-width: 150px; /* Ensure labels align */
+    display: inline-block;
+}
+
+.usage-tracker-settings input[type="number"],
+.usage-tracker-settings input[type="time"],
+.usage-tracker-settings select {
+    flex-grow: 1; /* Allow inputs/selects to take available space */
+    margin-right: 10px;
+}
+
+.usage-tracker-settings .text_pole {
+    max-width: 100px; /* Limit width of number inputs */
+}
+
+.usage-tracker-settings .threshold-list {
+    margin-bottom: 15px;
+    padding-left: 20px;
+    border-left: 1px solid var(--SmartThemeBorderColor);
+}
+
+.usage-tracker-settings .threshold-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px dashed var(--SmartThemeBorderColor);
+}
+.usage-tracker-settings .threshold-item:last-child {
+    border-bottom: none;
+}
+
+.usage-tracker-settings .threshold-item span {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.usage-tracker-settings .threshold-item .menu_button {
+    padding: 2px 8px;
+    font-size: 0.8em;
+    background-color: var(--DangerColor); /* Use theme's danger color */
+}
+.usage-tracker-settings .threshold-item .menu_button:hover {
+    background-color: var(--DangerColorHover);
+}
+
+.usage-tracker-settings #usageTracker_requestNotifyPermission {
+    margin-left: 10px;
+    flex-grow: 0; /* Don't let the button grow */
+    padding: 5px 10px;
+}
+
+.usage-tracker-settings small {
+    margin-left: 10px;
+    opacity: 0.7;
+}

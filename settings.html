@@ -1,0 +1,80 @@
+<div class="usage-tracker-settings">
+    <!-- General Settings -->
+    <div class="inline-drawer">
+        <div class="inline-drawer-toggle inline-drawer-header">
+            <b>通用设置</b>
+            <div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div>
+        </div>
+        <div class="inline-drawer-content">
+            <div class="usage-tracker_block flex-container">
+                <label for="usageTracker_enabled">启用插件:</label>
+                <input type="checkbox" id="usageTracker_enabled" checked>
+            </div>
+            <div class="usage-tracker_block flex-container">
+                <label for="usageTracker_notifyType">提醒方式:</label>
+                <select id="usageTracker_notifyType">
+                    <option value="toastr">应用内提示 (Toastr)</option>
+                    <option value="browser">浏览器通知</option>
+                    <option value="both">两者都用</option>
+                </select>
+                <button id="usageTracker_requestNotifyPermission" class="menu_button" title="请求浏览器通知权限">请求权限</button>
+            </div>
+            <hr class="sysHR">
+        </div>
+    </div>
+
+    <!-- Continuous Tracking Settings -->
+    <div class="inline-drawer">
+        <div class="inline-drawer-toggle inline-drawer-header">
+            <b>连续在线时长提醒</b>
+            <div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div>
+        </div>
+        <div class="inline-drawer-content">
+            <div class="usage-tracker_block flex-container">
+                <label for="usageTracker_enableDurationTracking">启用此模式:</label>
+                <input type="checkbox" id="usageTracker_enableDurationTracking" checked>
+            </div>
+            <div class="usage-tracker_block flex-container">
+                <label for="usageTracker_gracePeriod">最小离线时长 (分钟):</label>
+                <input type="number" id="usageTracker_gracePeriod" class="text_pole" min="0" value="5">
+                <small>(离线短于此时长，计时不中断)</small>
+            </div>
+            <div class="usage-tracker_block">
+                <label>时长阈值 (小时):</label>
+                <div id="usageTracker_durationThresholdsList" class="threshold-list">
+                    <!-- Duration thresholds will be added here by JS -->
+                </div>
+                <div class="flex-container">
+                    <input type="number" id="usageTracker_newDuration" class="text_pole" min="0.1" step="0.1" placeholder="小时数">
+                    <button id="usageTracker_addDuration" class="menu_button"><i class="fa-solid fa-plus"></i> 添加阈值</button>
+                </div>
+            </div>
+            <hr class="sysHR">
+        </div>
+    </div>
+
+    <!-- Fixed Time Tracking Settings -->
+    <div class="inline-drawer">
+        <div class="inline-drawer-toggle inline-drawer-header">
+            <b>固定时间点提醒</b>
+            <div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div>
+        </div>
+        <div class="inline-drawer-content">
+             <div class="usage-tracker_block flex-container">
+                <label for="usageTracker_enableFixedTimeTracking">启用此模式:</label>
+                <input type="checkbox" id="usageTracker_enableFixedTimeTracking" checked>
+            </div>
+            <div class="usage-tracker_block">
+                <label>提醒时间点 (HH:MM):</label>
+                <div id="usageTracker_fixedTimesList" class="threshold-list">
+                    <!-- Fixed time points will be added here by JS -->
+                </div>
+                <div class="flex-container">
+                    <input type="time" id="usageTracker_newFixedTime" class="text_pole">
+                    <button id="usageTracker_addFixedTime" class="menu_button"><i class="fa-solid fa-plus"></i> 添加时间点</button>
+                </div>
+            </div>
+            <hr class="sysHR">
+        </div>
+    </div>
+</div>
