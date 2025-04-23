@@ -5,7 +5,7 @@ import { saveSettingsDebounced, eventSource, event_types } from "../../../../scr
 // import { callPopup, POPUP_TYPE } from "../../../popup.js"; // If needed for confirmation popups
 
 (function () {
-    const extensionName = "usage-tracker";
+    const extensionName = "usage-tracker2";
     const extensionFolderPath = `scripts/extensions/third-party/${extensionName}`;
 
     // LocalStorage Keys
